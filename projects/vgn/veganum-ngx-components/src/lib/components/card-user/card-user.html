@@ -1,0 +1,24 @@
+@if (user) {
+<div class="vgn-card-user">
+  <img
+    [ngClass]="{ 'vgn-card-user--avatar': cardType === 'avatar' }"
+    [src]="user.picture?.medium"
+    alt="Imagen del usuario"
+    class="avatar"
+  />
+
+  <div class="vgn-card-user--content">
+    <div class="vgn-card-user--info">
+      <p>{{ user.name?.first ?? '' }}</p>
+      <p>{{ user.name?.last ?? '' }}</p>
+    </div>
+
+    @if (check) {
+    <div class="vgn-card-user--check">
+      <input type="checkbox" id="checkbox" (click)="onCheck()" />
+      <label for="checkbox">Check</label>
+    </div>
+    }
+  </div>
+</div>
+}

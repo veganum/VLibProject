@@ -2,4 +2,8 @@
  * Public API Surface of veganum-ngx-components
  */
 
-export * from './lib/top-button/top-button';
+//Components
+export * from './lib/components/top-button/top-button';
+export * from './lib/components/card-user/card-user';
+//Models
+export * from './lib/components/card-user/models/card-user';

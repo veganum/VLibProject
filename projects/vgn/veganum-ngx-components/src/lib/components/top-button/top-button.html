@@ -1,0 +1,30 @@
+@if (showButton()) {
+  <button
+    id="myBtn"
+    title="Ir arriba"
+    [ngStyle]="{ 'background-color': color }"
+    (click)="scrollToTop()"
+  >
+    @if (showIcon) {
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="20px"
+        height="20px"
+        viewBox="-5 -4 25 15"
+        xml:space="preserve"
+      >
+        <polyline
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          points="0,7 7,0 15,7"
+        />
+      </svg>
+    } @else {
+      <span>{{ text }}</span>
+    }
+  </button>
+}
