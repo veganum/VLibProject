@@ -1,59 +1,96 @@
 # VLibProject
 
+Ejemplo de creacion de librerias en angular.En  construccion...
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
 
-## Development server
+## Documentación para Crear una Librería Angular
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 1) CREAR PROYECTO
 
 ```bash
-ng generate component component-name
+ng new v-lib-project --create-application
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 2) CREAR LIBRERIA
 
 ```bash
-ng generate --help
+ng g library @vgn/veganum-ngx-components --prefix=vgn
 ```
 
-## Building
+El prefix es como se llamará el componente en Angular. Ejemplo: `<mat-icon>` el prefix es `mat`. Si no ponemos prefix nos pondrá `lib` por defecto.
 
-To build the project run:
+### 3) COMPILAR LIBRERIA
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### 4) CREACION PAQUETE DE LA LIBRERIA
 
-## Running unit tests
+Navegar a la carpeta de distribución:
+```
+C:\Users\vegan\Desktop\Proyectos\Angular\angular-libreria\v-lib-project\dist\vgn\veganum-ngx-components
+```
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+Crear el paquete:
 ```bash
-ng test
+npm pack
 ```
 
-## Running end-to-end tests
+Para `package.json`:
+```json
+"npm_pack": "cd dist/vgn/v-lib-project && npm pack",
+"package": "npm run build && npm run npm_pack"
+```
 
-For end-to-end (e2e) testing, run:
+También se puede apuntar a la ruta localmente desde el proyecto host.
 
+### 5) INSTALACION LOCAL Y CONFIGURACION
+
+Si instalamos así:
 ```bash
-ng e2e
+npm i C:\Users\vegan\Desktop\Proyectos\Angular\angular-libreria\v-lib-project\dist\vgn\veganum-ngx-components
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+En `angular.json` agregar en "architect" > "build" > "options":
+```json
+"architect": {
+  "build": {
+    "builder": "@angular/build:application",
+    "options": {
+      "preserveSymlinks": true,
+      // ... otras opciones
+    }
+  }
+}
+```
 
-## Additional Resources
+### Uso de npm link
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+`npm link` crea un enlace simbólico en nuestro node_modules global.
+
+Desde el host (para linkar el host con el link de npm - la librería):
+```bash
+npm link @vgn/veganum-ngx-components
+```
+
+### 6) QUITAR CACHEO DE .angular
+
+Al trabajar con watch se cachea y no nos deja ver los cambios reales. En `angular.json`:
+```json
+"cli": {
+  "packageManager": "npm",
+  "analytics": false,
+  "cache": {
+    "enabled": false
+  }
+}
+```
+
+### 7) CREAR COMPONENTES EN LA LIBRERÍA
+
+Si tenemos más de 1 proyecto, indicamos el proyecto específico:
+```bash
+ng g c top-button --project=@vgn/veganum-ngx-components
+```

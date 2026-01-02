@@ -3,6 +3,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@vgn/veganum-ngx-components": [
+        "./dist/vgn/veganum-ngx-components"
+      ]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -21,5 +26,13 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/vgn/veganum-ngx-components/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/vgn/veganum-ngx-components/tsconfig.spec.json"
+    }
+  ]
 }
