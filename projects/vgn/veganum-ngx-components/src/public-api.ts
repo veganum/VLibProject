@@ -7,3 +7,5 @@ export * from './lib/components/top-button/top-button';
 export * from './lib/components/card-user/card-user';
 //Models
 export * from './lib/components/card-user/models/card-user';
+//Directives
+export * from './lib/directives/highlight';
