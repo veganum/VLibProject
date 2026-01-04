@@ -205,21 +205,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<TopButton>",
-                "defaultValue": "{\r\n  title: 'veganum-ngx-components/Components/TopButton',\r\n  component: TopButton,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [TopButton],\r\n    }),\r\n    componentWrapperDecorator(\r\n      (story) =>\r\n        `${story}<div style=\"min-height: 1500px; background: #e8e8e8;\">Scroll to show up top-button</div>`\r\n    ),\r\n  ],\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardUser>",
                 "defaultValue": "{\r\n  title: 'veganum-ngx-components/Components/CardUser',\r\n  component: CardUser,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [CardUser],\r\n    }),\r\n  ],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TopButton>",
+                "defaultValue": "{\r\n  title: 'veganum-ngx-components/Components/TopButton',\r\n  component: TopButton,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [TopButton],\r\n    }),\r\n    componentWrapperDecorator(\r\n      (story) =>\r\n        `${story}<div style=\"min-height: 1500px; background: #e8e8e8;\">Scroll to show up top-button</div>`\r\n    ),\r\n  ],\r\n}"
             },
             {
                 "name": "preview",
@@ -269,8 +269,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TopButton>",
-                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "rawtype": "StoryObj<CardUser>",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -280,8 +280,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CardUser>",
-                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "rawtype": "StoryObj<TopButton>",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -445,19 +445,6 @@
                     "kind": 184
                 }
             ],
-            "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<TopButton>",
-                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts": [
                 {
                     "name": "Story",
@@ -465,6 +452,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardUser>",
                     "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TopButton>",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",

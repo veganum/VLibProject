@@ -54,3 +54,15 @@ export const AVATAR: Story = {
   },
 };
 
+export const DARK_MODE: Story = {
+  name: 'Dark Mode',
+  args: {
+    user,
+  },
+  argTypes: {
+    checked: { action: 'checked' },
+  },
+  globals: { theme: 'dark' },
+};
+
+
