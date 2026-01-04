@@ -1,0 +1,656 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "DummyComponent",
+            "id": "component-DummyComponent-171b98aed301a518e4a0e57f0d1b66ffec3dd6373c4933f3a243e506e3508b001dcf1d3529bcadbbc9cf7733f52b68835266e1d5a1b9d11180ef99fa4cd245d9",
+            "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-dummy",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div style=\"margin-bottom: 10px;\">\n  <input\n    style=\"margin-bottom: 10px;\"\n    type=\"text\"\n    placeholder=\"search\"\n    (input)=\"searchText($event)\"\n  />\n  <div [vgnHighlight]=\"text()\" [highLightedText]=\"textToFind()\" [color]=\"color\">\n    {{ text() }}\n  </div>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'yellow'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "text",
+                    "defaultValue": "signal<string>(\r\n    'Curso de librerías de Angular, texto de prueba para resaltar utilizando directivas personalizadas.'\r\n  )",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 27,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "textToFind",
+                    "defaultValue": "signal<string>('')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 26,
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "searchText",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        125
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "Highlight"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Highlight } from './../../../../../directives/highlight/highlight';\r\nimport { Component, Input, signal } from '@angular/core';\r\nimport { Meta, moduleMetadata, StoryObj } from '@storybook/angular';\r\n\r\n@Component({\r\n  selector: 'app-dummy',\r\n  standalone: true,\r\n  imports: [Highlight],\r\n  template: `\r\n    <div style=\"margin-bottom: 10px;\">\r\n      <input\r\n        style=\"margin-bottom: 10px;\"\r\n        type=\"text\"\r\n        placeholder=\"search\"\r\n        (input)=\"searchText($event)\"\r\n      />\r\n      <div [vgnHighlight]=\"text()\" [highLightedText]=\"textToFind()\" [color]=\"color\">\r\n        {{ text() }}\r\n      </div>\r\n    </div>\r\n  `,\r\n})\r\nexport class DummyComponent {\r\n  @Input() color: string = 'yellow';\r\n\r\n  public textToFind = signal<string>('');\r\n  public text = signal<string>(\r\n    'Curso de librerías de Angular, texto de prueba para resaltar utilizando directivas personalizadas.'\r\n  );\r\n\r\n  public searchText(event: Event): void {\r\n    const inputElement = event.target as HTMLInputElement;\r\n    this.textToFind.set(inputElement.value as string);\r\n  }\r\n}\r\n\r\nconst hightlight: Meta<DummyComponent> = {\r\n  title: 'veganum-ngx-components/Directives/Highlight',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [Highlight],\r\n    }),\r\n  ],\r\n};\r\n\r\nexport default hightlight;\r\n\r\ntype Story = StoryObj<DummyComponent>;\r\n\r\nexport const BASIC: Story = {\r\n  name: 'Basic',\r\n  args: {\r\n    color: 'yellow',\r\n  },\r\n};\r\n\r\nexport const GREEN: Story = {\r\n  name: 'Green',\r\n  args: {\r\n    color: 'green',\r\n  },\r\n};\r\n\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "AVATAR",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  name: 'Avatar',\r\n  args: {\r\n    user,\r\n    check: true,\r\n    cardType: 'avatar',\r\n  },\r\n  argTypes: {\r\n    checked: { action: 'checked' },\r\n  },\r\n}"
+            },
+            {
+                "name": "BASIC",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  name: 'Basic',\r\n  args: {\r\n    color: 'yellow',\r\n  },\r\n}"
+            },
+            {
+                "name": "BASIC",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  name: 'Basic',\r\n  args: {\r\n    user\r\n  },\r\n}"
+            },
+            {
+                "name": "CHECKBOX",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  name: 'Checkbox',\r\n  args: {\r\n    user,\r\n    check: true,\r\n  },\r\n  argTypes:{\r\n    checked: { action: 'checked' }\r\n  }\r\n}"
+            },
+            {
+                "name": "COLOR",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  name: 'Color',\r\n  args: {\r\n    showIcon: true,\r\n    color: '#cb1818',\r\n  },\r\n}"
+            },
+            {
+                "name": "GREEN",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  name: 'Green',\r\n  args: {\r\n    color: 'green',\r\n  },\r\n}"
+            },
+            {
+                "name": "hightlight",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DummyComponent>",
+                "defaultValue": "{\r\n  title: 'veganum-ngx-components/Directives/Highlight',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [Highlight],\r\n    }),\r\n  ],\r\n}"
+            },
+            {
+                "name": "ICON",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  name: 'Icon',\r\n  args: {\r\n    showIcon: true,\r\n    text: 'Top',\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TopButton>",
+                "defaultValue": "{\r\n  title: 'veganum-ngx-components/Components/TopButton',\r\n  component: TopButton,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [TopButton],\r\n    }),\r\n    componentWrapperDecorator(\r\n      (story) =>\r\n        `${story}<div style=\"min-height: 1500px; background: #e8e8e8;\">Scroll to show up top-button</div>`\r\n    ),\r\n  ],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardUser>",
+                "defaultValue": "{\r\n  title: 'veganum-ngx-components/Components/CardUser',\r\n  component: CardUser,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [CardUser],\r\n    }),\r\n  ],\r\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/.storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n       color: /(background|color)$/i,\n       date: /Date$/i,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "TEXT",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  name: 'Text',\r\n  args: {\r\n    showIcon: false,\r\n    text: 'Top',\r\n  },\r\n}"
+            },
+            {
+                "name": "user",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  name: { first: 'José', last: 'Franco Nieto' },\r\n  picture: {\r\n    medium: 'https://randomuser.me/api/portraits/men/75.jpg',\r\n    thumbnail: 'https://randomuser.me/api/portraits/men/75.jpg'\r\n  },\r\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DummyComponent>",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TopButton>",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardUser>",
+                "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts": [
+                {
+                    "name": "AVATAR",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  name: 'Avatar',\r\n  args: {\r\n    user,\r\n    check: true,\r\n    cardType: 'avatar',\r\n  },\r\n  argTypes: {\r\n    checked: { action: 'checked' },\r\n  },\r\n}"
+                },
+                {
+                    "name": "BASIC",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  name: 'Basic',\r\n  args: {\r\n    user\r\n  },\r\n}"
+                },
+                {
+                    "name": "CHECKBOX",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  name: 'Checkbox',\r\n  args: {\r\n    user,\r\n    check: true,\r\n  },\r\n  argTypes:{\r\n    checked: { action: 'checked' }\r\n  }\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardUser>",
+                    "defaultValue": "{\r\n  title: 'veganum-ngx-components/Components/CardUser',\r\n  component: CardUser,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [CardUser],\r\n    }),\r\n  ],\r\n}"
+                },
+                {
+                    "name": "user",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  name: { first: 'José', last: 'Franco Nieto' },\r\n  picture: {\r\n    medium: 'https://randomuser.me/api/portraits/men/75.jpg',\r\n    thumbnail: 'https://randomuser.me/api/portraits/men/75.jpg'\r\n  },\r\n}"
+                }
+            ],
+            "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts": [
+                {
+                    "name": "BASIC",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  name: 'Basic',\r\n  args: {\r\n    color: 'yellow',\r\n  },\r\n}"
+                },
+                {
+                    "name": "GREEN",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  name: 'Green',\r\n  args: {\r\n    color: 'green',\r\n  },\r\n}"
+                },
+                {
+                    "name": "hightlight",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DummyComponent>",
+                    "defaultValue": "{\r\n  title: 'veganum-ngx-components/Directives/Highlight',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [Highlight],\r\n    }),\r\n  ],\r\n}"
+                }
+            ],
+            "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts": [
+                {
+                    "name": "COLOR",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  name: 'Color',\r\n  args: {\r\n    showIcon: true,\r\n    color: '#cb1818',\r\n  },\r\n}"
+                },
+                {
+                    "name": "ICON",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  name: 'Icon',\r\n  args: {\r\n    showIcon: true,\r\n    text: 'Top',\r\n  },\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TopButton>",
+                    "defaultValue": "{\r\n  title: 'veganum-ngx-components/Components/TopButton',\r\n  component: TopButton,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [TopButton],\r\n    }),\r\n    componentWrapperDecorator(\r\n      (story) =>\r\n        `${story}<div style=\"min-height: 1500px; background: #e8e8e8;\">Scroll to show up top-button</div>`\r\n    ),\r\n  ],\r\n}"
+                },
+                {
+                    "name": "TEXT",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  name: 'Text',\r\n  args: {\r\n    showIcon: false,\r\n    text: 'Top',\r\n  },\r\n}"
+                }
+            ],
+            "projects/vgn/veganum-ngx-components/.storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vgn/veganum-ngx-components/.storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n       color: /(background|color)$/i,\n       date: /Date$/i,\n      },\n    },\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DummyComponent>",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TopButton>",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardUser>",
+                    "file": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "children": []
+    },
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "AVATAR",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BASIC",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "CHECKBOX",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "user",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/card-user/card-user.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "COLOR",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ICON",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TEXT",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/components/top-button/top-button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DummyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BASIC",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "GREEN",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "hightlight",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vgn/veganum-ngx-components/src/stories/lib/veganum-ngx-components/directives/highlight.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

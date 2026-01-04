@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import * as CardUserStories from './card-user.stories.ts';
+
+<Meta title="README" of={CardUserStories} />
+
+# VGN CARD USER
+
+Componente para mostrar card de usuario.
+
+## ¿Que hace este componente?
+
+Muestra informacion basica de un usuario en formato card.
+
+## Uso:
+
+#### Importacion
+```ts
+import {
+  CardUser,
+  UserName,
+  CardUserDto,
+} from '@vgn/veganum-ngx-components/components/card-user';
+
+  @Component({
+  standalone: true,
+  imports: [CardUser],
+})
+```
+#### HTML
+```html
+  <vgn-card-user [user]="user" [check]="true" cardType="avatar" (checked)="onUserCheck($event)" ></vgn-card-user>
+```
+

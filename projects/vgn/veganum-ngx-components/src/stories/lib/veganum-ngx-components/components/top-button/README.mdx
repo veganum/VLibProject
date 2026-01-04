@@ -1,0 +1,29 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import * as TopButtonStories from './top-button.stories.ts';
+
+<Meta title="README" of={TopButtonStories} />
+
+# VGN TOP-BUTTON
+
+Componente para mostrar un boton cuando se hace scroll en la pagina.
+
+## ¿Que hace este componente?
+
+Cuando hay scroll en la pagina, muestra un boton flotante en la esquina inferior derecha de la pantalla. Al hacer click en el boton, se desplaza la pagina hacia arriba.
+
+## Uso:
+
+#### Importacion
+```ts
+import { TopButton } from '@vgn/veganum-ngx-components/components/top-button';
+
+  @Component({
+  standalone: true,
+  imports: [TopButton],
+})
+```
+#### HTML
+```html
+  <vgn-top-button></vgn-top-button>
+```
+

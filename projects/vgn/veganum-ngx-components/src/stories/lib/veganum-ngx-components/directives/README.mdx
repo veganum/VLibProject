@@ -1,0 +1,48 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import * as HighlightStories from './highlight.stories.ts';
+
+<Meta title="README" of={HighlightStories} />
+
+# VGN HIGHLIGHT
+
+Directiva para resaltar texto en un parrafo.
+
+## ¿Que hace este componente?
+
+Resalta el texto especificado dentro de un parrafo aplicando un estilo visual para destacarlo.
+
+## Uso:
+
+#### Importacion
+
+```ts
+import { Highlight } from '@vgn/veganum-ngx-components/directives/highlight';
+
+  @Component({
+  standalone: true,
+  imports: [Highlight],
+})
+```
+
+#### HTML
+
+```html
+<div style="margin-bottom: 10px;">
+  <input
+    style="margin-bottom: 10px;"
+    type="text"
+    placeholder="search"
+    (input)="searchText($event)"
+  />
+  <div [vgnHighlight]="text()" [highLightedText]="textToFind()">{{text()}}</div>
+</div>
+```
+
+#### ts
+
+```ts
+  public searchText(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    this.textToFind.set(inputElement.value as string);
+  }
+```
