@@ -1,4 +1,4 @@
-import { Highlight } from './../../../../../directives/highlight/highlight';
+import { Highlight } from './../../../../directives/highlight/highlight';
 import { Component, Input, signal } from '@angular/core';
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 
