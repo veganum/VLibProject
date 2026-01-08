@@ -43,7 +43,7 @@ describe('CardUser', () => {
   });
 
   it('should emit user name when checkbox is clicked', () => {
-    const emitSpy = spyOn(component.checked, 'emit');
+    const emitSpy = vi.spyOn(component.checked, 'emit');
     component.check = true;
 
     fixture.detectChanges();
