@@ -1,5 +1,5 @@
 import { componentWrapperDecorator, moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
-import { TopButton } from '../../../../../../components/top-button/top-button';
+import { TopButton } from '../../../../../components/top-button/top-button';
 
 
 

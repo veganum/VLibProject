@@ -1,5 +1,5 @@
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
-import { CardUser } from '../../../../../../components/card-user/card-user';
+import { CardUser } from '../../../../../components/card-user/card-user';
 
 const meta: Meta<CardUser> = {
   title: 'veganum-ngx-components/Components/CardUser',
